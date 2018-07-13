@@ -23,8 +23,9 @@ function reset(){
 	console.log("reset called");
 }
 
-function myFunction(event) {
+function myLogic(event) {
 	console.log(target);
+	console.log(event);
     var x = event.which || event.keyCode;
     var returnedStr = String.fromCharCode(x);
     capturedKey = returnedStr;
@@ -49,6 +50,9 @@ function myFunction(event) {
 		reset();
 	}
 }
+ var body = document.querySelector("body");
+ body.addEventListener("keypress", myLogic);
+
 
 
 
